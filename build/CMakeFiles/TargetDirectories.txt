@@ -1,0 +1,4 @@
+/Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/build/CMakeFiles/sim_bc408_1.dir
+/Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/build/CMakeFiles/Simulation1.dir
+/Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/build/CMakeFiles/edit_cache.dir
+/Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/build/CMakeFiles/rebuild_cache.dir

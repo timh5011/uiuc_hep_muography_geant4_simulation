@@ -1,0 +1,40 @@
+#include "EventAction.hh"
+
+MyEventAction::MyEventAction(MySteppingAction* steppingAction)
+    : fSteppingAction(steppingAction)
+{}
+
+MyEventAction::~MyEventAction() {}
+
+// Called at the beginning of each event
+void MyEventAction::BeginOfEventAction(const G4Event* event)
+{
+    // Reset the total optical photon energy at the beginning of each event
+    fSteppingAction->ResetTotalOpticalPhotonEnergy();
+    fSteppingAction->ResetTotalLightYield();
+}
+
+// Called at the end of each event
+void MyEventAction::EndOfEventAction(const G4Event* event)
+{
+    // Get and print the total optical photon energy accumulated during the event
+    G4double totalEnergy = fSteppingAction->GetTotalOpticalPhotonEnergy();
+    G4cout << "Total scintillation photon energy for this event: "
+           << totalEnergy * MeV << " MeV" << G4endl; // divide or multiply by MeV?
+     
+    // Get and print the total light yield during the event
+    G4double totalYield = fSteppingAction->GetTotalLightYield();
+    G4cout << "Total light yield for this event: "
+           << totalYield << " scintillation photons were emitted." <<G4endl;
+    
+    // Check results with Birk's Law Prediction:
+    // Convert the total light yield to the light yield per unit energy deposited:
+    G4cout << "Light yield per MeV for this event: "
+           << totalYield/totalEnergy << G4endl;
+
+    // Get and print total muon deposited energy
+    G4double totalDeposited = fSteppingAction->GetTotalDepositedEnergy();
+    G4cout << "Total energy deposited by the muon for this event: " 
+           << totalDeposited * MeV << "MeV" << G4endl;
+
+}
