@@ -12,9 +12,7 @@ void MyRunAction::BeginOfRunAction(const G4Run*) {
 
     manager->CreateNtuple("Hits", "Hits");
     manager->CreateNtupleIColumn("fEvent");
-    manager->CreateNtupleDColumn("fX");
-    //manager->CreateNtupleDColumn("fY");
-    //manager->CreateNtupleDColumn("fZ");
+    manager->CreateNtupleDColumn("fEnergyDeposited");
     manager->FinishNtuple(0);
 }
 

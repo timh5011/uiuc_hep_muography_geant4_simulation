@@ -6,6 +6,7 @@
 #include "SteppingAction.hh"
 #include "G4RunManager.hh"
 #include "G4SystemOfUnits.hh"
+#include "Detector.hh"
 
 class MyEventAction : public G4UserEventAction
 {

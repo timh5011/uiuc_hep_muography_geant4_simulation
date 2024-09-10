@@ -24,16 +24,17 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     // ::::::::::::: Do I want to measure from aStep, preStepPoint, or postStepPoint? :::::::::::::::::::::::::
 
     G4double edep = aStep->GetTrack()->GetKineticEnergy();
-    G4cout << "Photon Energy:" << edep * MeV << G4endl;
+    // G4cout << "Photon Energy:" << edep * MeV << G4endl;
 
     G4ThreeVector momPhoton = aStep->GetTrack()->GetMomentum();
     // G4cout << "Photon Momentum:" << momPhoton << G4endl;
-    G4cout << "Photon Momentum Magnitude:" << momPhoton.mag() * MeV  << G4endl;
+    // G4cout << "Photon Momentum Magnitude:" << momPhoton.mag() * MeV  << G4endl;
 
     G4ThreeVector posPhoton = preStepPoint->GetPosition();
 
     // ::::::::::::::::::::::::: Identify Creation Process of Photon: :::::::::::::::::::::::::::::::::::::::::::::::::
 
+    /*
     if (aStep->GetTrack()->GetParticleDefinition() == G4OpticalPhoton::OpticalPhotonDefinition()) {
         G4String creatorProcess = aStep->GetTrack()->GetCreatorProcess()->GetProcessName();
         if (creatorProcess == "Scintillation") {
@@ -47,6 +48,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
             G4cout << "Cerenkov photon detected by SiPM." << G4endl;
         }
     }
+    */
 
     G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
