@@ -1,6 +1,7 @@
 #include "Detector.hh"
 
-MySensitiveDetector::MySensitiveDetector(G4String name) : G4VSensitiveDetector(name) {}
+MySensitiveDetector::MySensitiveDetector(G4String name)
+     : G4VSensitiveDetector(name), totalEnergyDepositDetector(0.0) {}
 
 MySensitiveDetector::~MySensitiveDetector() {}
 
@@ -50,12 +51,25 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     }
     */
 
+   // ::::::::::::::::::::::::: Get sum of total energy deposited in sensitive detector ::::::::::::::::::::::::::::::::::
+
+   if (aStep->GetTrack()->GetParticleDefinition() == G4OpticalPhoton::OpticalPhotonDefinition()) {
+        G4String creatorProcess = aStep->GetTrack()->GetCreatorProcess()->GetProcessName();
+        if (creatorProcess == "Scintillation") {
+            totalEnergyDepositDetector += aStep->GetTotalEnergyDeposit();
+        }
+    }
+
+    // ::::::::::::::::::::::::: Read Sensitive Detector Hits into ROOT Ntuple ::::::::::::::::::::::::::::::::::::::::::::::
+
+    /*
     G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
     G4AnalysisManager *manager = G4AnalysisManager::Instance();
     manager->FillNtupleIColumn(0, evt);
     manager->FillNtupleDColumn(1, edep);
     manager->AddNtupleRow(0);
+    */
  
 
     // G4cout << "Photon Position:" << posPhoton << G4endl;
@@ -69,3 +83,14 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     // G4ThreeVolume posDetector = physVol->GetTranslation();
     
 }
+
+G4double MySensitiveDetector::GetTotalDepositedEnergyDetector() const 
+{
+    return totalEnergyDepositDetector;
+}
+
+void MySensitiveDetector::ResetTotalDepositedEnergyDetector() 
+{
+    totalEnergyDepositDetector = 0.0;
+}
+

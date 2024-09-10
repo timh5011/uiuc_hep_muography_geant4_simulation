@@ -14,9 +14,13 @@ class MySensitiveDetector : public G4VSensitiveDetector {
     public:
         MySensitiveDetector(G4String);
         ~MySensitiveDetector();
-    
-    private:
+        
         virtual G4bool ProcessHits(G4Step *, G4TouchableHistory *);
+
+        void ResetTotalDepositedEnergyDetector();
+        G4double GetTotalDepositedEnergyDetector() const;
+    private:
+        G4double totalEnergyDepositDetector;
 };
 
 #endif

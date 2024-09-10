@@ -7,6 +7,7 @@
 #include "SteppingAction.hh"
 #include "EventAction.hh"
 #include "RunAction.hh"
+#include "Detector.hh"
 
 class MyActionInitialization : public G4VUserActionInitialization {
     public:

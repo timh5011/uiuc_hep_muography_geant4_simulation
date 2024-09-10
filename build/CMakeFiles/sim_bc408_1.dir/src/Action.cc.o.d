@@ -1184,8 +1184,13 @@ CMakeFiles/sim_bc408_1.dir/src/Action.cc.o: \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4RunManagerKernel.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/rundefs.hh \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/list \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/RunAction.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UserRunAction.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/Detector.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VSensitiveDetector.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4CollectionNameVector.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VHit.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VReadOutGeometry.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4SensitiveVolumeList.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VSDFilter.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisManager.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericAnalysisManager.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ToolsAnalysisManager.hh \
@@ -1245,4 +1250,6 @@ CMakeFiles/sim_bc408_1.dir/src/Action.cc.o: \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ToolsAnalysisManager.icc \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericAnalysisManager.icc \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.icc
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/RunAction.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UserRunAction.hh

@@ -7,12 +7,14 @@
 #include "G4RunManager.hh"
 #include "G4SystemOfUnits.hh"
 #include "Detector.hh"
+#include "G4AnalysisManager.hh"
+#include "G4RunManager.hh"
 
 class MyEventAction : public G4UserEventAction
 {
 public:
     // Constructor
-    MyEventAction(MySteppingAction* steppingAction);
+    MyEventAction(MySteppingAction* steppingAction, MySensitiveDetector* sensitiveDetector);
 
     // Destructor
     virtual ~MyEventAction();
@@ -24,7 +26,8 @@ public:
     virtual void EndOfEventAction(const G4Event* event) override;
 
 private:
-    MySteppingAction* fSteppingAction;  // Pointer to the stepping action to access accumulated energy
+    MySteppingAction* fSteppingAction;  // Pointer to the stepping action to access total energy
+    MySensitiveDetector* fSensitiveDetector; // Pointer to the sensitive action to access total energy deposited in the SiPMs (sensitive detectors)
 };
 
 #endif

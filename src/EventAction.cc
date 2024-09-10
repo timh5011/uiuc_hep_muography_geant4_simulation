@@ -1,7 +1,7 @@
 #include "EventAction.hh"
 
-MyEventAction::MyEventAction(MySteppingAction* steppingAction)
-    : fSteppingAction(steppingAction)
+MyEventAction::MyEventAction(MySteppingAction* steppingAction, MySensitiveDetector* sensitiveDetector)
+    : fSteppingAction(steppingAction), fSensitiveDetector(sensitiveDetector)
 {}
 
 MyEventAction::~MyEventAction() {}
@@ -13,12 +13,14 @@ void MyEventAction::BeginOfEventAction(const G4Event* event)
     fSteppingAction->ResetTotalOpticalPhotonEnergy();
     fSteppingAction->ResetTotalLightYield();
     fSteppingAction->ResetTotalDepositedEnergy();
+
+    fSensitiveDetector->ResetTotalDepositedEnergyDetector();
 }
 
 // Called at the end of each event
 void MyEventAction::EndOfEventAction(const G4Event* event)
 {
-    // Values from Stepping Action :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    // ::::::::::::::::::::::: Values from Stepping Action :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     // Get and print the total optical photon energy accumulated during the event
     G4double totalEnergy = fSteppingAction->GetTotalOpticalPhotonEnergy();
@@ -41,8 +43,17 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
     // G4cout << "Total energy deposited by the muon for this event: " 
     //       << totalDeposited * MeV << "MeV" << G4endl;
 
-    // Values from Sensitive Detector :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    // ::::::::::::::::::::::: Values from Sensitive Detector :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-    G4double detectorDeposited = 
+    G4double totalDepositedInDetector = fSensitiveDetector->GetTotalDepositedEnergyDetector();
+
+    // ::::::::::::::::::::::: Store Deposited Energy in ROOT Ntuple :::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+
+    G4AnalysisManager *manager = G4AnalysisManager::Instance();
+    manager->FillNtupleIColumn(0, evt);
+    manager->FillNtupleDColumn(1, totalDepositedInDetector);
+    manager->AddNtupleRow(0);
 
 }
