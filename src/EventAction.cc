@@ -56,4 +56,13 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
     manager->FillNtupleDColumn(1, totalDepositedInDetector);
     manager->AddNtupleRow(0);
 
+    // I may have learned why geant4 doesn't implement SiPMs. Scintillation photons do not deposit energy in sensitive detectors
+    // in the same way that charged particles do. This is because it doesn't interact with the material via excitation or ionization (?)
+    // which is the cause of energy deposition.
+    // I may need to track the number of scintillation photons (light yield) and the energy of each particle. 
+
+    // So instead of implementing a sensitive detector which is similar to a SiPM, I need to know the amount of scintillation photons 
+    // which hit the detector, the energies of these photons (use kinetic energy because massless particle means KE = E),
+    // and the quantum efficiency of the SiPM. 
+
 }
