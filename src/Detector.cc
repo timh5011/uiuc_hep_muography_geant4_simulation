@@ -48,6 +48,14 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
         }
     }
 
+    G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+
+    G4AnalysisManager *manager = G4AnalysisManager::Instance();
+    manager->FillNtupleIColumn(0, evt);
+    manager->FillNtupleDColumn(1, edep);
+    manager->AddNtupleRow(0);
+ 
+
     // G4cout << "Photon Position:" << posPhoton << G4endl;
 
     // Get copy number of detector which photon hit:

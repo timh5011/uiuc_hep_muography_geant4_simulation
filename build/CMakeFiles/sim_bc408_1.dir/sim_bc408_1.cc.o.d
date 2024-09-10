@@ -1332,64 +1332,6 @@ CMakeFiles/sim_bc408_1.dir/sim_bc408_1.cc.o: \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4SensitiveVolumeList.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VSDFilter.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4OpticalPhoton.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/Physics.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VModularPhysicsList.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VPhysicsConstructor.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4PhysicsListHelper.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4PhysicsListOrderingParameter.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ThreadLocalSingleton.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Cache.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4CacheDetails.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Backtrace.hh \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/cxxabi.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__cxxabi_config.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/execinfo.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/os/base.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/os/availability.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/uuid/uuid.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_types/_uuid_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/unistd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/unistd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_types/_posix_vdisable.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/gethostuuid.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/cfenv \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/fenv.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/fenv.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/csignal \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/signal.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/regex \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/deque \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VUPLSplitter.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VUserPhysicsList.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ProductionCutsTable.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4MaterialCutsCouple.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ProductionCuts.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4MCCIndexConversionTable.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4EmStandardPhysics.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4OpticalPhysics.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4OpticalParameters.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4DecayPhysics.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Decay.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VRestDiscreteProcess.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ParticleChangeForDecay.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4DecayProcessType.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/FTFP_BERT.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Scintillation.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4EmSaturation.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4MuonPlus.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/Action.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VUserActionInitialization.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/Generator.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ParticleGun.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VPrimaryGenerator.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/SteppingAction.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/EventAction.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UserEventAction.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/RunAction.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UserRunAction.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisManager.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericAnalysisManager.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ToolsAnalysisManager.hh \
@@ -1449,4 +1391,62 @@ CMakeFiles/sim_bc408_1.dir/sim_bc408_1.cc.o: \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ToolsAnalysisManager.icc \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericAnalysisManager.icc \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.icc
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/Physics.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VModularPhysicsList.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VPhysicsConstructor.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4PhysicsListHelper.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4PhysicsListOrderingParameter.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ThreadLocalSingleton.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Cache.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4CacheDetails.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Backtrace.hh \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/cxxabi.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__cxxabi_config.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/execinfo.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/os/base.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/os/availability.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/uuid/uuid.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_types/_uuid_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/unistd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/unistd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_types/_posix_vdisable.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/select.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/sys/_select.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/gethostuuid.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/cfenv \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/fenv.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/fenv.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/csignal \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/signal.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/regex \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/deque \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VUPLSplitter.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VUserPhysicsList.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ProductionCutsTable.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4MaterialCutsCouple.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ProductionCuts.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4MCCIndexConversionTable.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4EmStandardPhysics.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4OpticalPhysics.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4OpticalParameters.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4DecayPhysics.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Decay.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VRestDiscreteProcess.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ParticleChangeForDecay.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4DecayProcessType.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/FTFP_BERT.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Scintillation.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4EmSaturation.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4MuonPlus.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/Action.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VUserActionInitialization.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/Generator.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ParticleGun.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VPrimaryGenerator.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/SteppingAction.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/EventAction.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UserEventAction.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/simulations/sim_bc408_1/include/RunAction.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UserRunAction.hh
