@@ -19,8 +19,12 @@ class MySensitiveDetector : public G4VSensitiveDetector {
 
         void ResetTotalDepositedEnergyDetector();
         G4double GetTotalDepositedEnergyDetector() const;
+
+        void ResetTotalDepositedLightYieldDetector();
+        G4double GetTotalDepositedLightYieldDetector() const;
     private:
         G4double totalEnergyDepositDetector;
+        G4double totalLightYieldDetector;
 };
 
 #endif

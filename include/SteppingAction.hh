@@ -10,6 +10,9 @@
 #include "G4Scintillation.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4MuonPlus.hh"
+// temporary:
+#include "G4AnalysisManager.hh"
+#include "G4RunManager.hh"
 
 class MySteppingAction : public G4UserSteppingAction
 {

@@ -45,16 +45,20 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
 
     // ::::::::::::::::::::::: Values from Sensitive Detector :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-    G4double totalDepositedInDetector = fSensitiveDetector->GetTotalDepositedEnergyDetector();
+    G4double totalEnergyDepositedInDetector = fSensitiveDetector->GetTotalDepositedEnergyDetector();
+    G4double totalYieldDepositedInDetector = fSensitiveDetector->GetTotalDepositedLightYieldDetector();
 
     // ::::::::::::::::::::::: Store Deposited Energy in ROOT Ntuple :::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
     G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
     G4AnalysisManager *manager = G4AnalysisManager::Instance();
     manager->FillNtupleIColumn(0, evt);
-    manager->FillNtupleDColumn(1, totalDepositedInDetector);
+    manager->FillNtupleDColumn(1, totalEnergyDepositedInDetector);
+    manager->FillNtupleDColumn(2, totalYieldDepositedInDetector);
     manager->AddNtupleRow(0);
+
 
     // I may have learned why geant4 doesn't implement SiPMs. Scintillation photons do not deposit energy in sensitive detectors
     // in the same way that charged particles do. This is because it doesn't interact with the material via excitation or ionization (?)

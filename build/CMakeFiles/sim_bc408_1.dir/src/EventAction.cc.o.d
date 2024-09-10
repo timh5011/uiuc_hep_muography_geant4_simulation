@@ -1116,6 +1116,72 @@ CMakeFiles/sim_bc408_1.dir/src/EventAction.cc.o: \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ParticleChange.icc \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4SystemOfUnits.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4MuonPlus.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericAnalysisManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ToolsAnalysisManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VAnalysisManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisManagerState.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisVerbose.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisUtilities.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VTBaseHnManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4HnInformation.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4BinScheme.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Fcn.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VAnalysisManager.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4HnManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4BaseAnalysisManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4NtupleBookingManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/ntuple_booking \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/cids \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/cid \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/typedefs \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/forit \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4NtupleBookingManager.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VNtupleManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VFileManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4BaseFileManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VTHnFileManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TH1ToolsManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnToolsManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnManager.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnMessenger.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UImessenger.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UIdirectory.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UIcommand.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ApplicationState.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UIparameter.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UItokenNum.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnToolsManager.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnMessenger.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Tokenizer.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TH2ToolsManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TH3ToolsManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TP1ToolsManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TP2ToolsManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h1d \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h1 \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/b1 \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/base_histo \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/histo_data \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/axes \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/axis \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/../eqT \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h2d \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h2 \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/b2 \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h3d \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h3 \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/b3 \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/p1d \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/p1 \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/profile_data \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/p2d \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/p2 \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ToolsAnalysisManager.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericAnalysisManager.icc \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.hh \
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.icc \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4RunManager.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4EventManager.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4StackManager.hh \
@@ -1168,12 +1234,6 @@ CMakeFiles/sim_bc408_1.dir/src/EventAction.cc.o: \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VSteppingVerbose.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/trkgdefs.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TrackingMessenger.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UImessenger.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UIdirectory.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UIcommand.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ApplicationState.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UIparameter.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UItokenNum.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4UserTrackingAction.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4RunManagerKernel.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/rundefs.hh \
@@ -1184,64 +1244,4 @@ CMakeFiles/sim_bc408_1.dir/src/EventAction.cc.o: \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VHit.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VReadOutGeometry.hh \
   /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4SensitiveVolumeList.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VSDFilter.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericAnalysisManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ToolsAnalysisManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VAnalysisManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisManagerState.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisVerbose.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4AnalysisUtilities.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VTBaseHnManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4HnInformation.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4BinScheme.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Fcn.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VAnalysisManager.icc \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4HnManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4BaseAnalysisManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4NtupleBookingManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/ntuple_booking \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/cids \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/cid \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/typedefs \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/forit \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4NtupleBookingManager.icc \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VNtupleManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VFileManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4BaseFileManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VTHnFileManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TH1ToolsManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnToolsManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnManager.icc \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnMessenger.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnToolsManager.icc \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4THnMessenger.icc \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4Tokenizer.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TH2ToolsManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TH3ToolsManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TP1ToolsManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4TP2ToolsManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h1d \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h1 \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/b1 \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/base_histo \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/histo_data \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/axes \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/axis \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/../eqT \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h2d \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h2 \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/b2 \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h3d \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/h3 \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/b3 \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/p1d \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/p1 \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/profile_data \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/p2d \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/tools/histo/p2 \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4ToolsAnalysisManager.icc \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericAnalysisManager.icc \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.hh \
-  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4GenericFileManager.icc
+  /Users/timmymac/Desktop/Professional/CERN/geant4/geant4-v11.2.2-install/include/Geant4/G4VSDFilter.hh
