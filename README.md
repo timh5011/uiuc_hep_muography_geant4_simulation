@@ -15,9 +15,12 @@ cd build
 cmake ..
 ```
 *    2. Run make from build folder
-*    3. Run Executable: ./sim_bc408_1
 ```
 make
+```
+*    3. Run Executable: ./sim_bc408_1
+```
+./sim_bc408_1
 ```
 *    4. After running events, hits will be stored in output.root file in build directory. To access these, run root output.root and open a new TBrowser
 ```
