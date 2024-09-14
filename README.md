@@ -10,17 +10,17 @@ We simulate the passage of a 100 GeV positive muon through a volume of BC408 and
 Must have Geant4 source code installed. 
 *    1. Clone the repository locally into same root directory as Geant4 source code
 *    2. Navigate to build folder and run cmake ..
-'''
+```
 cd build
 cmake ..
-'''
+```
 *    2. Run make from build folder
 *    3. Run Executable: ./sim_bc408_1
-'''
+```
 make
-'''
+```
 *    4. After running events, hits will be stored in output.root file in build directory. To access these, run root output.root and open a new TBrowser
-'''
+```
 root output.root
 new TBrowser
-'''
+```
