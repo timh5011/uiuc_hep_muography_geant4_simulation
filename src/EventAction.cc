@@ -50,7 +50,7 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
 
     // ::::::::::::::::::::::: Store Deposited Energy in ROOT Ntuple :::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
+/*
     G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
     G4AnalysisManager *manager = G4AnalysisManager::Instance();
@@ -58,6 +58,7 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
     manager->FillNtupleDColumn(1, totalEnergyDepositedInDetector);
     manager->FillNtupleDColumn(2, totalYieldDepositedInDetector);
     manager->AddNtupleRow(0);
+*/
 
 
     // I may have learned why geant4 doesn't implement SiPMs. Scintillation photons do not deposit energy in sensitive detectors

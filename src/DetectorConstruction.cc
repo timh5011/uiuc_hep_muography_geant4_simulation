@@ -68,30 +68,33 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     // BC408_mt->AddConstProperty("SCINTILLATIONRISETIME3", 20);
 
 
-
     BC408->SetMaterialPropertiesTable(BC408_mt);
- 
-
-    G4Material *worldMat = G4Material::GetMaterial("BC408");
-
-
-
 
     // Volumes |=========================================================================================================
+    
+    G4Material *ScintMat = G4Material::GetMaterial("BC408");
+    G4Material* worldMat = nist->FindOrBuildMaterial("G4_AIR");
+    
+    // Define Mother Volume :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-
-
-    // Define Mother Volume (BC408) ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-    // Define World Volume
-    G4Box *solidWorld = new G4Box("solidWorld", 30.5*cm, 30.5*cm, 0.635*cm);
+    G4Box *solidWorld = new G4Box("solidWorld", 3*m, 3*m, 3*m);
 
     // Define Logical Volume
     G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, worldMat, "logicWorld");
 
     // Define Physical Volume
     G4VPhysicalVolume *physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
+
+
+    // Define Scintillator Volume: :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    // Define World Volume
+    G4Box *solidScint = new G4Box("solidScint", 30.5*cm, 30.5*cm, 0.635*cm);
+
+    // Define Logical Volume
+    G4LogicalVolume *logicScint = new G4LogicalVolume(solidScint, ScintMat, "logicWorld");
+
+    // Define Physical Volume
+    G4VPhysicalVolume *physScint = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicScint, "physScint", logicWorld, false, 0, true);
 
 
 
@@ -106,7 +109,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
         for (G4int j = 0; j < 2; j++) {
             G4VPhysicalVolume *physDetector = new G4PVPlacement(0, 
             G4ThreeVector(-15.25*cm+i*30.5*cm, -15.25*cm+j*30.5*cm, 0.535*cm), 
-            logicDetector, "physDetector", logicWorld, false, j+i*2, true);
+            logicDetector, "physDetector", logicScint, false, j+i*2, true);
         }
     }
 
@@ -115,7 +118,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
         for (G4int j = 0; j < 50; j++) {
             G4VPhysicalVolume *physDetector = new G4PVPlacement(0, 
             G4ThreeVector(-30.5*cm+(10*i+6*cm), -30.5*cm+(10*j+6*cm), 0.535*cm), 
-            logicDetector, "physDetector", logicWorld, false, j+i*20, true);
+            logicDetector, "physDetector", logicScint, false, j+i*20, true);
         }
     }
     */

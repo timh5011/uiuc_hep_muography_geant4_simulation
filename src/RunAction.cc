@@ -12,8 +12,9 @@ void MyRunAction::BeginOfRunAction(const G4Run*) {
 
     manager->CreateNtuple("Hits", "Hits");
     manager->CreateNtupleIColumn("fEvent");
-    manager->CreateNtupleDColumn("fEnergyDeposited");
-    manager->CreateNtupleDColumn("fLightYieldDeposited");
+    manager->CreateNtupleDColumn("fX");
+    manager->CreateNtupleDColumn("fY");
+    manager->CreateNtupleDColumn("fZ");
     manager->FinishNtuple(0);
 }
 
