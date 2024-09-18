@@ -22,6 +22,15 @@ void MyRunAction::BeginOfRunAction(const G4Run*) {
     manager->CreateNtupleDColumn("fZ");
     manager->FinishNtuple(0);
 */
+
+    //code for writing into csv file
+    auto csvmanager{ G4CsvAnalysisManager::Instance() };
+    csvmanager->OpenFile("output.csv");
+    csvmanager->CreateNtuple("Hits", "Hits");
+    csvmanager->CreateNtupleIColumn("fEvent");
+    csvmanager->CreateNtupleDColumn("trackID");
+    csvmanager->CreateNtupleDColumn("Energy");
+    csvmanager->FinishNtuple(0);
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*) {
@@ -29,4 +38,9 @@ void MyRunAction::EndOfRunAction(const G4Run*) {
 
     manager->Write();
     manager->CloseFile();
+
+    //code for writing into csv file
+    auto csvmanager{ G4CsvAnalysisManager::Instance() };
+    csvmanager->Write();
+    csvmanager->CloseFile();
 }

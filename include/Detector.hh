@@ -7,7 +7,9 @@
 #include "G4SystemOfUnits.hh"
 #include "G4AnalysisManager.hh"
 #include "G4RunManager.hh"
-
+//includes for CSV
+#include "g4csv_defs.hh"
+#include "G4CsvAnalysisManager.hh"
 
 
 class MySensitiveDetector : public G4VSensitiveDetector {
