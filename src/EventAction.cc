@@ -10,11 +10,13 @@ MyEventAction::~MyEventAction() {}
 void MyEventAction::BeginOfEventAction(const G4Event* event)
 {
     // Reset the total optical photon energy at the beginning of each event
+    
     fSteppingAction->ResetTotalOpticalPhotonEnergy();
     fSteppingAction->ResetTotalLightYield();
     fSteppingAction->ResetTotalDepositedEnergy();
 
     fSensitiveDetector->ResetTotalDepositedEnergyDetector();
+    fSensitiveDetector->ResetTotalDepositedLightYieldDetector();
 }
 
 // Called at the end of each event
@@ -29,6 +31,7 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
      
     // Get and print the total light yield during the event
     G4double totalYield = fSteppingAction->GetTotalLightYield();
+    
     // G4cout << "Total light yield for this event: "
     //        << totalYield << " scintillation photons were emitted." <<G4endl;
     
@@ -45,8 +48,16 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
 
     // ::::::::::::::::::::::: Values from Sensitive Detector :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-    G4double totalEnergyDepositedInDetector = fSensitiveDetector->GetTotalDepositedEnergyDetector();
-    G4double totalYieldDepositedInDetector = fSensitiveDetector->GetTotalDepositedLightYieldDetector();
+    G4double sipmTotalEnergy = fSensitiveDetector->GetTotalDepositedEnergyDetector();
+    G4double sipmTotalYield = fSensitiveDetector->GetTotalDepositedLightYieldDetector();
+    // G4cout << "ENERGY: " << sipmTotalEnergy << "MeV" << G4endl;
+    // Store in ROOT Histogram:
+    
+    G4AnalysisManager* manager = G4AnalysisManager::Instance();
+
+    manager->FillH1(0, sipmTotalYield);
+    manager->FillH1(1, sipmTotalEnergy);
+    manager->FillH1(2, totalEnergy);
 
     // ::::::::::::::::::::::: Store Deposited Energy in ROOT Ntuple :::::::::::::::::::::::::::::::::::::::::::::::::::
 

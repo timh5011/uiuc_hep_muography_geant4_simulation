@@ -18,10 +18,10 @@ class MySensitiveDetector : public G4VSensitiveDetector {
         virtual G4bool ProcessHits(G4Step *, G4TouchableHistory *);
 
         void ResetTotalDepositedEnergyDetector();
-        G4double GetTotalDepositedEnergyDetector() const;
+        G4double GetTotalDepositedEnergyDetector();
 
         void ResetTotalDepositedLightYieldDetector();
-        G4double GetTotalDepositedLightYieldDetector() const;
+        G4double GetTotalDepositedLightYieldDetector();
     private:
         G4double totalEnergyDepositDetector;
         G4double totalLightYieldDetector;

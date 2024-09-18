@@ -23,14 +23,14 @@ void MySteppingAction::UserSteppingAction(const G4Step* step) {
             {
                 // Accumulate the energy of optical photons created by scintillation
                 G4double photonEnergy = secondary->GetKineticEnergy();
-                totalOpticalPhotonEnergy += photonEnergy;
+                totalOpticalPhotonEnergy += photonEnergy / MeV; // This used to be * MeV --- check this is correct
                 totalLightYield += 1;
                 // G4cout << "Scintillation Photon Energy: " << photonEnergy / eV << " eV" << G4endl;
             }
         }
     }
     /*
-    if (totalOpticalPhotonEnergy != 0) {
+    if (totalOpticalPhotonEnergy != 0) { // I think I should only return this at end of event. Or this is what I should store in root.
         G4cout << "Total Scintillation Photon Energy: " << totalOpticalPhotonEnergy / eV << " eV" << G4endl;
     }
     */

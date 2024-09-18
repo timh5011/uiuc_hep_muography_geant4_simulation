@@ -10,12 +10,18 @@ void MyRunAction::BeginOfRunAction(const G4Run*) {
     
     manager->OpenFile("output.root");
 
+    manager->CreateH1("SiPMLightYield", "Total Photon Hits per Event", 100, 0, 20000);
+    manager->CreateH1("SiPMEnergy", "Total Energy Deposited by Photons per Event", 100, 0, 100000/keV);  // Histogram ID = 1
+    manager->CreateH1("TotalEnergy", "Total Energy of Photons per Event", 100, 0, 500/keV);
+    
+/*
     manager->CreateNtuple("Hits", "Hits");
     manager->CreateNtupleIColumn("fEvent");
     manager->CreateNtupleDColumn("fX");
     manager->CreateNtupleDColumn("fY");
     manager->CreateNtupleDColumn("fZ");
     manager->FinishNtuple(0);
+*/
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*) {

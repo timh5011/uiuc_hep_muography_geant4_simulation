@@ -72,7 +72,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
 
     // Volumes |=========================================================================================================
     
-    G4Material *ScintMat = G4Material::GetMaterial("BC408");
+    G4Material *scintMat = G4Material::GetMaterial("BC408");
     G4Material* worldMat = nist->FindOrBuildMaterial("G4_AIR");
     
     // Define Mother Volume :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -91,7 +91,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     G4Box *solidScint = new G4Box("solidScint", 30.5*cm, 30.5*cm, 0.635*cm);
 
     // Define Logical Volume
-    G4LogicalVolume *logicScint = new G4LogicalVolume(solidScint, ScintMat, "logicWorld");
+    G4LogicalVolume *logicScint = new G4LogicalVolume(solidScint, scintMat, "logicWorld");
 
     // Define Physical Volume
     G4VPhysicalVolume *physScint = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicScint, "physScint", logicWorld, false, 0, true);
@@ -103,7 +103,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
 
     G4Box *solidDetector = new G4Box("solidDetector", 3*mm, 3*mm, 1*mm);
 
-    logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicDetector"); // Material doesn't matter
+    logicDetector = new G4LogicalVolume(solidDetector, scintMat, "logicDetector");
 
     for (G4int i = 0; i < 2; i++) {
         for (G4int j = 0; j < 2; j++) {
