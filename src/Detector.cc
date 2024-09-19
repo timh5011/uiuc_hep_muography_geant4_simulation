@@ -26,6 +26,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     G4ThreeVector posPhoton = preStepPoint->GetPosition();
     //G4cout << "Photon Position: " << posPhoton << G4endl;
 
+    //variables for CSV ntuples
+    G4int trackID{ track->GetTrackID() };
+    G4int event{ G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID() };
+    track->SetTrackStatus(fStopAndKill);
     // ::::::::::::::::::::::::: Identify Creation Process of Photon: :::::::::::::::::::::::::::::::::::::::::::::::::
 
     if (aStep->GetTrack()->GetParticleDefinition() == G4OpticalPhoton::OpticalPhotonDefinition()) {
@@ -85,6 +89,14 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     // Get position of detector:
     // G4VPhysicalVolume *physVol = touchable->GetVolume();
     // G4ThreeVector posDetector = physVol->GetTranslation();
+
+
+    // ::::::::::::::::::::::::: Read Sensitive Detector Hits into CSV Ntuples ::::::::::::::::::::::::::::::::::::::::::::::
+    G4CsvAnalysisManager* csvmanager{ G4CsvAnalysisManager::Instance() };
+    csvmanager->FillNtupleIColumn(0, event);
+    csvmanager->FillNtupleDColumn(1, trackID);
+    csvmanager->FillNtupleDColumn(2, edep);
+    csvmanager->AddNtupleRow(0);
     return true;
 }
 
