@@ -73,7 +73,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     // Volumes |=========================================================================================================
     
     G4Material *scintMat = G4Material::GetMaterial("BC408");
-    G4Material* worldMat = nist->FindOrBuildMaterial("G4_AIR");
+    G4Material *worldMat = nist->FindOrBuildMaterial("G4_AIR");
     
     // Define Mother Volume :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
