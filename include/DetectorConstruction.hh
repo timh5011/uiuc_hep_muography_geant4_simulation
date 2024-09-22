@@ -9,6 +9,8 @@
 #include "G4NistManager.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4ThreeVector.hh"
+#include "G4OpticalSurface.hh"
+#include "G4LogicalSkinSurface.hh"
 
 #include "Detector.hh"
 
@@ -22,6 +24,8 @@ class MyDetectorConstruction : public G4VUserDetectorConstruction {
     private:
         G4LogicalVolume *logicDetector;
         virtual void ConstructSDandField();
+
+        G4OpticalSurface *mirrorSurface;
 };
 
 #endif

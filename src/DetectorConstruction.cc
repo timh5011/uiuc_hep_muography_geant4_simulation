@@ -70,6 +70,17 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
 
     BC408->SetMaterialPropertiesTable(BC408_mt);
 
+    // Mirror Surface Boundary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    G4double reflectivity[4] = {1.0, 1.0, 1.0, 1.0};
+    mirrorSurface = new G4OpticalSurface("mirrorSurface");
+
+    G4MaterialPropertiesTable *mptMirror = new G4MaterialPropertiesTable();
+
+    mptMirror->AddProperty("REFLECTIVITY", PhotonEnergy, reflectivity, 4);
+
+    mirrorSurface->SetMaterialPropertiesTable(mptMirror);
+
     // Volumes |=========================================================================================================
     
     G4Material *scintMat = G4Material::GetMaterial("BC408");
@@ -92,6 +103,9 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
 
     // Define Logical Volume
     G4LogicalVolume *logicScint = new G4LogicalVolume(solidScint, scintMat, "logicWorld");
+
+    // Define Logical Reflecive Surface Boundary
+    G4LogicalSkinSurface *skin = new G4LogicalSkinSurface("skin", logicScint, mirrorSurface);
 
     // Define Physical Volume
     G4VPhysicalVolume *physScint = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicScint, "physScint", logicWorld, false, 0, true);
