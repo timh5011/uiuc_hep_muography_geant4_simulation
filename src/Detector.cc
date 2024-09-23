@@ -17,6 +17,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     // ::::::::::::: Do I want to measure from aStep, preStepPoint, or postStepPoint? :::::::::::::::::::::::::
 
     G4double edep = aStep->GetTrack()->GetKineticEnergy();
+    edep = edep / eV;
     // G4cout << "Photon Energy:" << edep * MeV << G4endl;
 
     G4ThreeVector momPhoton = aStep->GetTrack()->GetMomentum();
@@ -32,17 +33,20 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     track->SetTrackStatus(fStopAndKill);
     // ::::::::::::::::::::::::: Identify Creation Process of Photon: :::::::::::::::::::::::::::::::::::::::::::::::::
 
+/*
     if (aStep->GetTrack()->GetParticleDefinition() == G4OpticalPhoton::OpticalPhotonDefinition()) {
         G4String creatorProcess = aStep->GetTrack()->GetCreatorProcess()->GetProcessName();
         if (creatorProcess == "Scintillation") {
             G4cout << "Scintillation photon detected by SiPM ==================================" << G4endl;
             G4cout << "Kinetic energy of single photon (edep): " << edep / eV << G4endl;
-            totalEnergyDepositDetector += edep;
+            totalEnergyDepositDetector += edep / eV;
             G4cout << "totalEnergyDepositDetector: "<< totalEnergyDepositDetector / eV << G4endl;
             totalLightYieldDetector++;
             G4cout << "totalLightYieldDetector: " << totalLightYieldDetector << G4endl;
         }
     }
+*/
+
     /*
 
     if (aStep->GetTrack()->GetParticleDefinition() == G4OpticalPhoton::OpticalPhotonDefinition()) {

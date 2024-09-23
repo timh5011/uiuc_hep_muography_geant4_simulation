@@ -9,8 +9,9 @@ We simulate the passage of a 100 GeV positive muon through a volume of BC408 and
 
 Must have Geant4 source code installed. 
 1. Clone the repository locally into same root directory as Geant4 source code
-2. Navigate to build folder and run cmake ..
+2. Create a build directory and navigate to it. Run cmake ..
 ```
+mkdir build
 cd build
 cmake ..
 ```
