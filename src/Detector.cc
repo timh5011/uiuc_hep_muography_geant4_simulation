@@ -106,7 +106,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 
 G4double MySensitiveDetector::GetTotalDepositedEnergyDetector() 
 {
-    G4cout << "GET TOTAL ENERGY METHOD WAS CALLED: "<< totalEnergyDepositDetector << G4endl;
+    // G4cout << "GET TOTAL ENERGY METHOD WAS CALLED: "<< totalEnergyDepositDetector << G4endl;
     return totalEnergyDepositDetector;
 }
 
@@ -117,7 +117,7 @@ void MySensitiveDetector::ResetTotalDepositedEnergyDetector()
 
 G4double MySensitiveDetector::GetTotalDepositedLightYieldDetector() 
 {
-    G4cout << "GET TOTAL LIGHT YIELD METHOD WAS CALLED: "<< totalLightYieldDetector << G4endl;
+    // G4cout << "GET TOTAL LIGHT YIELD METHOD WAS CALLED: "<< totalLightYieldDetector << G4endl;
     return totalLightYieldDetector;
 }
 
