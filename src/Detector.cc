@@ -87,8 +87,8 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     // G4cout << "Photon Position:" << posPhoton << G4endl;
 
     // Get copy number of detector which photon hit:
-    // const G4VTouchable *touchable = aStep->GetPreStepPoint()->GetTouchable();
-    // G4int copyNo = touchable->GetCopyNumber();
+    const G4VTouchable *touchable = aStep->GetPreStepPoint()->GetTouchable();
+    G4int copyNo = touchable->GetCopyNumber();
 
     // Get position of detector:
     // G4VPhysicalVolume *physVol = touchable->GetVolume();
@@ -98,7 +98,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     // ::::::::::::::::::::::::: Read Sensitive Detector Hits into CSV Ntuples ::::::::::::::::::::::::::::::::::::::::::::::
     G4CsvAnalysisManager* csvmanager{ G4CsvAnalysisManager::Instance() };
     csvmanager->FillNtupleIColumn(0, event);
-    csvmanager->FillNtupleDColumn(1, trackID);
+    csvmanager->FillNtupleDColumn(1, copyNo);
     csvmanager->FillNtupleDColumn(2, edep);
     csvmanager->AddNtupleRow(0);
     return true;

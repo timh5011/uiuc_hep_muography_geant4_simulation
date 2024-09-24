@@ -28,7 +28,7 @@ void MyRunAction::BeginOfRunAction(const G4Run*) {
     csvmanager->OpenFile("output.csv");
     csvmanager->CreateNtuple("Hits", "Hits");
     csvmanager->CreateNtupleIColumn("fEvent");
-    csvmanager->CreateNtupleDColumn("trackID");
+    csvmanager->CreateNtupleDColumn("copyNo");
     csvmanager->CreateNtupleDColumn("Energy");
     csvmanager->FinishNtuple(0);
 }
