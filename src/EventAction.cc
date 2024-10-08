@@ -51,13 +51,17 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
     G4double sipmTotalEnergy = fSensitiveDetector->GetTotalDepositedEnergyDetector();
     G4double sipmTotalYield = fSensitiveDetector->GetTotalDepositedLightYieldDetector();
     // G4cout << "ENERGY: " << sipmTotalEnergy << "MeV" << G4endl;
+
+    /* This was How I filled the ROOT output.root histograms ::::::::::::::::::::::::::
     // Store in ROOT Histogram:
-    
+ 
     G4AnalysisManager* manager = G4AnalysisManager::Instance();
 
     manager->FillH1(0, sipmTotalYield);
     manager->FillH1(1, sipmTotalEnergy);
     manager->FillH1(2, totalEnergy);
+    // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    */ 
 
     // ::::::::::::::::::::::: Store Deposited Energy in ROOT Ntuple :::::::::::::::::::::::::::::::::::::::::::::::::::
 

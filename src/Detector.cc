@@ -27,6 +27,9 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     G4ThreeVector posPhoton = preStepPoint->GetPosition();
     //G4cout << "Photon Position: " << posPhoton << G4endl;
 
+    // Get Time of Hit
+    G4double fTime = preStepPoint->GetGlobalTime();
+
     //variables for CSV ntuples
     G4int trackID{ track->GetTrackID() };
     G4int event{ G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID() };
@@ -65,21 +68,21 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 
     // ::::::::::::::::::::::::: Read Sensitive Detector Hits into ROOT Ntuple ::::::::::::::::::::::::::::::::::::::::::::::
 
+
+    // const G4VTouchable *touchable = aStep->GetPreStepPoint()->GetTouchable();
+    // G4VPhysicalVolume *physVol = touchable->GetVolume();
+    // G4ThreeVector posDetector = physVol->GetTranslation();
+
 /*
-    const G4VTouchable *touchable = aStep->GetPreStepPoint()->GetTouchable();
-    G4VPhysicalVolume *physVol = touchable->GetVolume();
-    G4ThreeVector posDetector = physVol->GetTranslation();
-    G4cout << "Detector Position: " << posDetector << G4endl;
-
-    G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
-
     G4AnalysisManager *manager = G4AnalysisManager::Instance();
-    manager->FillNtupleIColumn(0, evt);
-    manager->FillNtupleDColumn(1, posDetector[0]);
-    manager->FillNtupleDColumn(2, posDetector[1]);
-    manager->FillNtupleDColumn(3, posDetector[2]);
+    manager->FillNtupleIColumn(0, 0, event);
+    manager->FillNtupleDColumn(0, 1, time);
+    // manager->FillNtupleDColumn(1, posDetector[0]);
+    // manager->FillNtupleDColumn(2, posDetector[1]);
+    // manager->FillNtupleDColumn(3, posDetector[2]);
     manager->AddNtupleRow(0);
 */
+
 
     
  
@@ -96,11 +99,14 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 
 
     // ::::::::::::::::::::::::: Read Sensitive Detector Hits into CSV Ntuples ::::::::::::::::::::::::::::::::::::::::::::::
+    
     G4CsvAnalysisManager* csvmanager{ G4CsvAnalysisManager::Instance() };
     csvmanager->FillNtupleIColumn(0, event);
     csvmanager->FillNtupleDColumn(1, copyNo);
-    csvmanager->FillNtupleDColumn(2, edep);
+    csvmanager->FillNtupleDColumn(2, 1); // used to be edep, now just 1 for photon count
+    // csvmanager->FillNtupleDColumn(2, fTime);
     csvmanager->AddNtupleRow(0);
+ 
     return true;
 }
 
