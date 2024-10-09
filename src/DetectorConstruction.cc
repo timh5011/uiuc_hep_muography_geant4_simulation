@@ -92,7 +92,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     
     // Define Mother Volume :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-    G4Box *solidWorld = new G4Box("solidWorld", 3*m, 3*m, 3*m);
+    G4Box *solidWorld = new G4Box("solidWorld", 5*m, 5*m, 5*m);
 
     // Define Logical Volume
     G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, worldMat, "logicWorld");
@@ -104,7 +104,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     // Define Scintillator Volume: :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     // Define World Volume
     G4Box *solidScint = new G4Box("solidScint", 30.5*cm, 30.5*cm, 0.635*cm);
-
+    // G4Box *solidScint = new G4Box("solidScint", 5*m, 5*m, 5*m);
     // Define Logical Volume
     G4LogicalVolume *logicScint = new G4LogicalVolume(solidScint, scintMat, "logicWorld");
 
@@ -119,6 +119,13 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
 
     // Define Four Photon Detectors (in place of SiPMs) ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+/*
+    G4Box *solidDetector = new G4Box("solidDetector", 5*m, 5*m, 1*m);
+    logicDetector = new G4LogicalVolume(solidDetector, scintMat, "logicDetector");
+    G4VPhysicalVolume *physDetector = new G4PVPlacement(0, 
+            G4ThreeVector(0, 0, 4*m), 
+            logicDetector, "physDetector", logicScint, false, 0, true);
+*/
     G4Box *solidDetector = new G4Box("solidDetector", 3*mm, 3*mm, 1*mm);
 
     logicDetector = new G4LogicalVolume(solidDetector, scintMat, "logicDetector");
@@ -126,7 +133,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     for (G4int i = 0; i < 2; i++) {
         for (G4int j = 0; j < 2; j++) {
             G4VPhysicalVolume *physDetector = new G4PVPlacement(0, 
-            G4ThreeVector(-15.25*cm+i*30.5*cm, -15.25*cm+j*30.5*cm, 0.535*cm), 
+            G4ThreeVector(-15.25*cm+i*30.5*cm, -15.25*cm+j*30.5*cm, 0.535*cm),  // changed cm to m ######
             logicDetector, "physDetector", logicScint, false, j+i*2, true);
         }
     }

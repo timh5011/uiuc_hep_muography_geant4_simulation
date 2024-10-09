@@ -28,7 +28,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     //G4cout << "Photon Position: " << posPhoton << G4endl;
 
     // Get Time of Hit
-    G4double fTime = preStepPoint->GetGlobalTime();
+    G4double fTime = preStepPoint->GetGlobalTime() / ns;
 
     //variables for CSV ntuples
     G4int trackID{ track->GetTrackID() };
@@ -104,7 +104,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     csvmanager->FillNtupleIColumn(0, event);
     csvmanager->FillNtupleDColumn(1, copyNo);
     csvmanager->FillNtupleDColumn(2, 1); // used to be edep, now just 1 for photon count
-    // csvmanager->FillNtupleDColumn(2, fTime);
+    csvmanager->FillNtupleDColumn(2, fTime);
     csvmanager->AddNtupleRow(0);
  
     return true;
