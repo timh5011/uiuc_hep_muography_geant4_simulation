@@ -13,7 +13,7 @@ args = parser.parse_args()
 df = pd.read_csv(args.csv_file, header=None, skiprows=8)
 
 # Rename columns for clarity
-df.columns = ['eventId', 'copyNo', 'energy']
+df.columns = ['eventId', 'copyNo', 'energy', 'fT'] # ADDED TIME COLUMN ONLY HERE
 
 # Create a dictionary to store the total energy per event for each detector
 total_energy_per_event = {0: {}, 1: {}, 2: {}, 3: {}}

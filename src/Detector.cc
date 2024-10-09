@@ -104,7 +104,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     csvmanager->FillNtupleIColumn(0, event);
     csvmanager->FillNtupleDColumn(1, copyNo);
     csvmanager->FillNtupleDColumn(2, 1); // used to be edep, now just 1 for photon count
-    csvmanager->FillNtupleDColumn(2, fTime);
+    csvmanager->FillNtupleDColumn(3, fTime);
     csvmanager->AddNtupleRow(0);
  
     return true;
