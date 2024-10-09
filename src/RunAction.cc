@@ -23,7 +23,7 @@ void MyRunAction::BeginOfRunAction(const G4Run*) {
     csvmanager->CreateNtuple("Hits", "Hits");
     csvmanager->CreateNtupleIColumn("fEvent");
     csvmanager->CreateNtupleDColumn("copyNo");
-    csvmanager->CreateNtupleDColumn("Hits");
+    csvmanager->CreateNtupleDColumn("light_yield");
     csvmanager->CreateNtupleDColumn("fT");
     csvmanager->FinishNtuple(0);
 }
