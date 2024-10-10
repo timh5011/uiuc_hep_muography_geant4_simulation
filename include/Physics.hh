@@ -6,7 +6,7 @@
 #include "G4OpticalPhysics.hh"
 #include "G4DecayPhysics.hh"
 #include "FTFP_BERT.hh"
-// #include "G4OpBoundaryProcess.hh"
+#include "G4OpBoundaryProcess.hh"
 
 // Not sure I need to explicitly register Scintillation Process. Don't think I do. 
 #include "G4Scintillation.hh"

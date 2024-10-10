@@ -72,8 +72,11 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
 
     // Mirror Surface Boundary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-    G4double reflectivity[4] = {0.95, 0.95, 0.95, 0.95}; // {1.0, 1.0, 1.0, 1.0};
-    
+    // G4double reflectivity[4] = {1.0, 1.0, 1.0, 1.0};
+    G4double reflectivity[4] = {0.95, 0.95, 0.95, 0.95};
+    // G4double reflectivity[4] = {0.65, 0.65, 0.65, 0.65};
+
+
     mirrorSurface = new G4OpticalSurface("mirrorSurface");
     mirrorSurface->SetType(dielectric_metal);
     mirrorSurface->SetModel(unified);
