@@ -72,12 +72,13 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
 
     // Mirror Surface Boundary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-    G4double reflectivity[4] = {0.98, 0.98, 0.98, 0.98};
+    G4double reflectivity[4] = {0.95, 0.95, 0.95, 0.95};
 
     mirrorSurface = new G4OpticalSurface("mirrorSurface");
     mirrorSurface->SetType(dielectric_metal);
     mirrorSurface->SetModel(unified);
-    mirrorSurface->SetFinish(polished);
+    mirrorSurface->SetFinish(groundteflonair); // Represents a diffuse reflection typical for Teflon
+
 
     G4MaterialPropertiesTable *mptMirror = new G4MaterialPropertiesTable();
 
@@ -92,7 +93,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     
     // Define Mother Volume :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-    G4Box *solidWorld = new G4Box("solidWorld", 5*m, 5*m, 5*m);
+    G4Box *solidWorld = new G4Box("solidWorld", 3*m, 3*m, 3*m);
 
     // Define Logical Volume
     G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, worldMat, "logicWorld");
@@ -133,7 +134,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     for (G4int i = 0; i < 2; i++) {
         for (G4int j = 0; j < 2; j++) {
             G4VPhysicalVolume *physDetector = new G4PVPlacement(0, 
-            G4ThreeVector(-15.25*cm+i*30.5*cm, -15.25*cm+j*30.5*cm, 0.535*cm),  // changed cm to m ######
+            G4ThreeVector(-15.25*cm+i*30.5*cm, -15.25*cm+j*30.5*cm, 0.735*cm),  // changed cm to m ######
             logicDetector, "physDetector", logicScint, false, j+i*2, true);
         }
     }
