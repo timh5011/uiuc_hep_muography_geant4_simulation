@@ -67,7 +67,6 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     // BC408_mt->AddConstProperty("SCINTILLATIONRISETIME2", 10);
     // BC408_mt->AddConstProperty("SCINTILLATIONRISETIME3", 20);
 
-
     BC408->SetMaterialPropertiesTable(BC408_mt);
 
     // Mirror Surface Boundary ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
