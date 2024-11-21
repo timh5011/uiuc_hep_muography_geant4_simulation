@@ -49,25 +49,25 @@ for i in range(4):
     plt.ylabel('Frequency')
 
 # Plot photon strikes over time for each detector (Bottom row)
+'''
 for i in range(4):
     plt.subplot(4, 2, i * 2 + 2)  # Adjusting the subplot index
     plt.hist(photon_hits_time[i], bins=50, edgecolor='black')  # Adjust bin size as needed
     plt.title(f'Photon Hits Over Time for single SiPM')
     plt.xlabel('Time (ns)')
     plt.ylabel('Number of Photon Hits')
-
 '''
+
 # Plot photon strikes over time for each detector (Bottom row)
 for i in range(4):
     plt.subplot(4, 2, i * 2 + 2)  # Adjusting the subplot index
-    plt.hist(photon_hits_time[i], bins=50, weights=[1/500] * len(photon_hits_time[i]), edgecolor='black')  # Scale by 1/500
+    plt.hist(photon_hits_time[i], bins=50, weights=[1/1000] * len(photon_hits_time[i]), edgecolor='black')  # Scale by 1/500
     plt.title(f'Average Photon Hits Over Time for single SiPM')
     plt.xlabel('Time (ns)')
-    plt.ylabel('Number of Photon Hits (scaled by 1/500)')
+    plt.ylabel('Photon Hits (scaled)')
 
 plt.tight_layout()
 plt.show()
-'''
 
 
 # Adjust layout
