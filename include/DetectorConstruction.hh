@@ -11,6 +11,8 @@
 #include "G4ThreeVector.hh"
 #include "G4OpticalSurface.hh"
 #include "G4LogicalSkinSurface.hh"
+#include "G4Tubs.hh"
+
 
 #include "Detector.hh"
 
@@ -23,6 +25,7 @@ class MyDetectorConstruction : public G4VUserDetectorConstruction {
     
     private:
         G4LogicalVolume *logicDetector;
+        G4LogicalVolume* logicFiber; 
         virtual void ConstructSDandField();
 
         G4OpticalSurface *mirrorSurface;

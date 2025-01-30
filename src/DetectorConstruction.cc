@@ -103,8 +103,10 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
 
     // Define Scintillator Volume: :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     // Define World Volume
-    G4Box *solidScint = new G4Box("solidScint", 30.5*cm, 30.5*cm, 0.635*cm);
+    // G4Box *solidScint = new G4Box("solidScint", 30.5*cm, 30.5*cm, 0.635*cm); THIS IS THE WORKING SQAURE SCINTILALTOR VOLUME
     // G4Box *solidScint = new G4Box("solidScint", 5*m, 5*m, 5*m);
+
+    G4Box *solidScint = new G4Box("solidScint", 0.9285*m, 2.5*cm, 0.5*cm); // Scintillatino Bar Design with fibers
     // Define Logical Volume
     G4LogicalVolume *logicScint = new G4LogicalVolume(solidScint, scintMat, "logicWorld");
 
@@ -126,6 +128,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
             G4ThreeVector(0, 0, 4*m), 
             logicDetector, "physDetector", logicScint, false, 0, true);
 */
+
+/* ============================  THIS IS THE WORKING SCINITLLATOR CONFIGIRATION CORRESPONDING TO SCINTILALTOR: (30.5*cm, 30.5*cm, 0.635*cm)  ===================================
     G4Box *solidDetector = new G4Box("solidDetector", 3*mm, 3*mm, 1*mm);
 
     logicDetector = new G4LogicalVolume(solidDetector, scintMat, "logicDetector");
@@ -137,6 +141,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
             logicDetector, "physDetector", logicScint, false, j+i*2, true);
         }
     }
+    =====================================================================================================================================
+*/ 
 
     /*
     for (G4int i = 0; i < 50; i++) {
@@ -148,13 +154,34 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
     }
     */
 
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// Implement 2 Wavelength Shifting Fibers as Sensitive Detectors (no SiPMs): 
+
+G4Tubs* solidFiber = new G4Tubs("solidFiber", 0, 0.5*mm, 0.9285*m, 0.*deg, 360.*deg);
+
+logicFiber = new G4LogicalVolume(solidFiber, scintMat, "logicFiber");
+
+G4double scintWidth = 2.5 * cm;
+G4double posY_1 = -scintWidth / 2 + scintWidth / 4; // 1/4 way across the width
+G4double posY_2 = scintWidth / 2 - scintWidth / 4;  // 3/4 way across the width
+
+// Place the detectors within the scintillator volume
+new G4PVPlacement(0, G4ThreeVector(0., posY_1, 0.), logicFiber, "physFiber1", logicScint, false, 0, true);
+new G4PVPlacement(0, G4ThreeVector(0., posY_2, 0.), logicFiber, "physFiber2", logicScint, false, 1, true);
+
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
     return physWorld;
 }
 
 // Implement Sensitive Detector and set equal to logicDetector
 
+
+
+// Required to inmplement sensitive detector:
+
 void MyDetectorConstruction::ConstructSDandField() {
     MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
-    logicDetector->SetSensitiveDetector(sensDet);
+    logicFiber->SetSensitiveDetector(sensDet);
 }

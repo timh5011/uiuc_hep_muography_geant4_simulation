@@ -12,8 +12,8 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent){
     G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
     G4ParticleDefinition *particle = particleTable->FindParticle("mu+");
 
-    G4double width = 61.0 * cm;  // Example width
-    G4double height = 61.0 * cm; // Example height
+    G4double width = 1.875 * m;  // Example width
+    G4double height = 5.0 * cm; // Example height
 
     // Generate random x and y coordinates within the scintillator volume
     G4double randomX = G4UniformRand() * width - (width / 2); // Centered at 0
