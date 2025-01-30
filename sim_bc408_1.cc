@@ -33,8 +33,6 @@ int main(int argc, char** argv) {
     UImanager->ApplyCommand("/vis/viewer/set/autoRefresh true");
     UImanager->ApplyCommand("/vis/scene/add/trajectories smooth");
     UImanager->ApplyCommand("/tracking/verbose 0");
-    /*
-    */
 
     //UImanager->ApplyCommand("/vis/scene/endOfEventAction accumulate");
 

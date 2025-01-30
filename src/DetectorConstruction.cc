@@ -161,13 +161,16 @@ G4Tubs* solidFiber = new G4Tubs("solidFiber", 0, 0.5*mm, 0.9285*m, 0.*deg, 360.*
 
 logicFiber = new G4LogicalVolume(solidFiber, scintMat, "logicFiber");
 
-G4double scintWidth = 2.5 * cm;
+
+G4RotationMatrix* rotY = new G4RotationMatrix();
+rotY->rotateY(90.0 * deg);
+G4double scintWidth = 5 * cm;
 G4double posY_1 = -scintWidth / 2 + scintWidth / 4; // 1/4 way across the width
 G4double posY_2 = scintWidth / 2 - scintWidth / 4;  // 3/4 way across the width
 
-// Place the detectors within the scintillator volume
-new G4PVPlacement(0, G4ThreeVector(0., posY_1, 0.), logicFiber, "physFiber1", logicScint, false, 0, true);
-new G4PVPlacement(0, G4ThreeVector(0., posY_2, 0.), logicFiber, "physFiber2", logicScint, false, 1, true);
+// Place the fibers parallel to the scintillator volume
+new G4PVPlacement(rotY, G4ThreeVector(0., posY_1, 0.), logicFiber, "physFiber1", logicScint, false, 0, true);
+new G4PVPlacement(rotY, G4ThreeVector(0., posY_2, 0.), logicFiber, "physFiber2", logicScint, false, 1, true);
 
 
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
