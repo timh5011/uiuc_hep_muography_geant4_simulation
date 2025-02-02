@@ -16,10 +16,10 @@ df = pd.read_csv(args.csv_file, header=None, skiprows=8)
 df.columns = ['eventId', 'copyNo', 'light_yield', 'fT']  # Changed 'energy' to 'light_yield'
 
 # Create a dictionary to store the total light yield (photon count) per event for each detector
-total_light_yield_per_event = {0: {}, 1: {}, 2: {}, 3: {}}
+total_light_yield_per_event = {0: {}, 1: {}}
 
 # Create a dictionary to store photon hits over time for each detector
-photon_hits_time = {0: [], 1: [], 2: [], 3: []}
+photon_hits_time = {0: [], 1: []}
 
 # Iterate over the DataFrame rows
 for index, row in df.iterrows():
@@ -41,37 +41,28 @@ for index, row in df.iterrows():
 plt.figure(figsize=(12, 10))
 
 # Plot individual detector histograms (Top row)
-for i in range(4):
-    plt.subplot(4, 2, i * 2 + 1)  # Adjusting the subplot index
-    plt.hist(total_light_yield_per_event[i].values(), bins=30, edgecolor='black')
-    plt.title(f'Total Light Yield for SiPM {i}')
+overflow_threshold = 10100
+for i in range(2):
+    plt.subplot(2, 2, i * 2 + 1)  # Adjusting the subplot index
+    values = list(total_light_yield_per_event[i].values())
+    values_with_overflow = [v if v <= overflow_threshold else overflow_threshold for v in values]
+    plt.hist(values_with_overflow, bins=30, edgecolor='black', range=(min(values_with_overflow), overflow_threshold + 500))
+    plt.axvline(x=overflow_threshold, color='red', linestyle='dashed', label='Overflow Bin')
+    plt.legend()
+    plt.title(f'Total Light Yield for Fiber {i}')
     plt.xlabel('Total Light Yield per Event (Photon Count)')
     plt.ylabel('Frequency')
 
 # Plot photon strikes over time for each detector (Bottom row)
-'''
-for i in range(4):
-    plt.subplot(4, 2, i * 2 + 2)  # Adjusting the subplot index
-    plt.hist(photon_hits_time[i], bins=50, edgecolor='black')  # Adjust bin size as needed
-    plt.title(f'Photon Hits Over Time for single SiPM')
-    plt.xlabel('Time (ns)')
-    plt.ylabel('Number of Photon Hits')
-'''
-
-# Plot photon strikes over time for each detector (Bottom row)
-for i in range(4):
-    plt.subplot(4, 2, i * 2 + 2)  # Adjusting the subplot index
-    plt.hist(photon_hits_time[i], bins=50, weights=[1/1000] * len(photon_hits_time[i]), edgecolor='black')  # Scale by 1/500
-    plt.title(f'Average Photon Hits Over Time for single SiPM')
+for i in range(2):
+    plt.subplot(2, 2, i * 2 + 2)  # Adjusting the subplot index
+    plt.hist(photon_hits_time[i], bins=50, weights=[1/10000] * len(photon_hits_time[i]), edgecolor='black')  # Scale by 1/(number of events)
+    plt.title(f'Average Photon Hits Over Time for Fiber {i}')
     plt.xlabel('Time (ns)')
     plt.ylabel('Photon Hits (scaled)')
 
 plt.tight_layout()
 plt.show()
-
-
-# Adjust layout
-plt.tight_layout()
 
 # Save the plot
 plt.savefig('total_light_yield_histograms_with_time.png')
@@ -79,14 +70,12 @@ plt.savefig('total_light_yield_histograms_with_time.png')
 # Save histogram data to CSV
 with open(args.output_csv, mode='w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(['EventId', 'Detector0', 'Detector1', 'Detector2', 'Detector3'])
+    writer.writerow(['EventId', 'Detector0', 'Detector1'])
     for eventId in total_light_yield_per_event[0].keys():
         row = [
             eventId,
             total_light_yield_per_event[0].get(eventId, 0),
-            total_light_yield_per_event[1].get(eventId, 0),
-            total_light_yield_per_event[2].get(eventId, 0),
-            total_light_yield_per_event[3].get(eventId, 0)
+            total_light_yield_per_event[1].get(eventId, 0)
         ]
         writer.writerow(row)
 
