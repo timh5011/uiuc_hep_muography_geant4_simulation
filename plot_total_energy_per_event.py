@@ -2,6 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import argparse
 import csv
+import numpy as np
+
+# python plot_total_energy_per_event.py build/10000EVENTS_FIBERS_HITS_output_nt_Hits\ copy.csv data/output_events_hist.csv
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description="Plot total light yield per event for each detector.")
@@ -46,18 +49,25 @@ for i in range(2):
     plt.subplot(2, 2, i * 2 + 1)  # Adjusting the subplot index
     values = list(total_light_yield_per_event[i].values())
     values_with_overflow = [v if v <= overflow_threshold else overflow_threshold for v in values]
+    mean_value = np.mean(values)
+    variance_value = np.var(values)
     plt.hist(values_with_overflow, bins=30, edgecolor='black', range=(min(values_with_overflow), overflow_threshold + 500))
     plt.axvline(x=overflow_threshold, color='red', linestyle='dashed', label='Overflow Bin')
+    plt.axvline(x=mean_value, color='blue', linestyle='dashed', label=f'Mean: {mean_value:.2f}')
     plt.legend()
-    plt.title(f'Total Light Yield for Fiber {i}')
+    plt.title(f'Total Light Yield for Fiber {i}\nMean: {mean_value:.2f}, Variance: {variance_value:.2f}')
     plt.xlabel('Total Light Yield per Event (Photon Count)')
     plt.ylabel('Frequency')
 
 # Plot photon strikes over time for each detector (Bottom row)
 for i in range(2):
     plt.subplot(2, 2, i * 2 + 2)  # Adjusting the subplot index
+    mean_time = np.mean(photon_hits_time[i])
+    variance_time = np.var(photon_hits_time[i])
     plt.hist(photon_hits_time[i], bins=50, weights=[1/10000] * len(photon_hits_time[i]), edgecolor='black')  # Scale by 1/(number of events)
-    plt.title(f'Average Photon Hits Over Time for Fiber {i}')
+    plt.axvline(x=mean_time, color='blue', linestyle='dashed', label=f'Mean: {mean_time:.2f}')
+    plt.legend()
+    plt.title(f'Average Photon Hits Over Time for Fiber {i}\nMean: {mean_time:.2f}, Variance: {variance_time:.2f}')
     plt.xlabel('Time (ns)')
     plt.ylabel('Photon Hits (scaled)')
 
