@@ -1,6 +1,6 @@
 # Geant4 Simulation of Plastic Scintillator BC408 for HEP Muography Group at UIUC and Occidental College
 
-We simulate the passage of a 100 GeV positive muon through a volume of BC408 and collect scintillation photon hits with four sensitive detectors, to be read out into ROOT histograms and csv files for analysis. Scintillation light yield has been validated against the expected theoretical quantity predicted by Bethe-Bloch and Birks' Law.
+We simulate the passage of a 100 GeV positive muon through a volume of BC408 and collect scintillation photon hits on wavelength shifting fibers (which channel the re-emitted photons into SiPMs), to be read out into a CSV file and a ROOT file for analysis. Scintillation light yield has been validated against the expected theoretical quantity predicted by Bethe-Bloch and Birks' Law.
 
 ## Table of Contents
 - [Installation and Use](#installation)
