@@ -4,7 +4,7 @@ We simulate the passage of a 100 GeV positive muon through a volume of BC408 and
 
 ## Table of Contents
 - [Installation and Use](#installation)
-- [Outline]
+- [Outline](#outline)
 
 ## Installation and Use
 
