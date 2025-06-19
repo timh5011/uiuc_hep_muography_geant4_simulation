@@ -26,25 +26,25 @@ void MyEventAction::EndOfEventAction(const G4Event* event)
 
     // Get and print the total optical photon energy accumulated during the event
     G4double totalEnergy = fSteppingAction->GetTotalOpticalPhotonEnergy();
-    // G4cout << "Total scintillation photon energy for this event: "
-    //        << totalEnergy * MeV << " MeV" << G4endl; // divide or multiply by MeV?
+    G4cout << "Total scintillation photon energy for this event: "
+        << totalEnergy / MeV << " MeV" << G4endl; // divide or multiply by MeV?
      
     // Get and print the total light yield during the event
     G4double totalYield = fSteppingAction->GetTotalLightYield();
     
-    // G4cout << "Total light yield for this event: "
-    //        << totalYield << " scintillation photons were emitted." <<G4endl;
+    G4cout << "Total light yield for this event: "
+            << totalYield << " scintillation photons were emitted." <<G4endl;
     
     // Check results with Birk's Law Prediction:
     G4double totalDeposited = fSteppingAction->GetTotalDepositedEnergy();
 
     // Convert the total light yield to the light yield per unit energy deposited:
-    // G4cout << "Light yield per MeV for this event: "
-    //        << totalYield/totalDeposited << G4endl;
+     G4cout << "Light yield per MeV for this event: "
+            << totalYield/totalDeposited << G4endl;
 
     // Get and print total muon deposited energy
-    // G4cout << "Total energy deposited by the muon for this event: " 
-    //       << totalDeposited * MeV << "MeV" << G4endl;
+     G4cout << "Total energy deposited by the muon for this event: " 
+           << totalDeposited / MeV << "MeV" << G4endl;
 
     // ::::::::::::::::::::::: Values from Sensitive Detector :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
