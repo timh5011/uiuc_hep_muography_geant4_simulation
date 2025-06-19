@@ -23,8 +23,14 @@ make
 ```
 ./sim_bc408_1
 ```
-4. After running events, hits will be stored in output.root file in build directory as well as in output_events_hist.csv. To access root files, run root output.root and open a new TBrowser.
+4. After running events, hits will be stored in output.root file in build directory. To access these, run root output.root and open a new TBrowser.
 ```
 root output.root
 new TBrowser
 ```
+The hits are also stored in a CSV file in the build directory: output_events_hist.csv. You can run python scripts to get plots of the light yields by running:
+```
+python plot_total_energy_per_event.py build/output_nt_Hits.csv data/output_events_hist.csv
+python plot_average_max_yield.py data/1000EVENTSHITS_output_nt_Hits.csv data/average_max_yield_entries.csv 2 6 
+```
+* Second script call may be build/output_nt_Hits.csv instead of data/1000EVENTSHITS_output_nt_Hits.csv.
