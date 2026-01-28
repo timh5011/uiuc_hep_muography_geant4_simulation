@@ -54,10 +54,7 @@ new TBrowser
 7. Generator defines the particle gun. This is what shoots muons into the scintillating material. Here we specify the parameters of the incoming muons, such as position, energy, angle, etc.
 
 
-# HEP Muography: Theoretical Validation of Simulation
-
-**Author:** Tim Healy  
-**Date:** September 2024
+# Theoretical Validation of Simulation
 
 ## 1. Scintillation Light Yield of BC-408
 
