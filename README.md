@@ -5,6 +5,7 @@ We simulate the passage of a 100 GeV positive muon through a volume of BC408 and
 ## Table of Contents
 - [Installation and Use](#installation)
 - [Outline](#outline)
+- [Theoretical Validation of Simulation Results](#theoretical-validation-of-simulation-results)
 
 ## Installation and Use
 
@@ -54,11 +55,11 @@ new TBrowser
 7. Generator defines the particle gun. This is what shoots muons into the scintillating material. Here we specify the parameters of the incoming muons, such as position, energy, angle, etc.
 
 
-# Theoretical Validation of Simulation
+## Theoretical Validation of Simulation Results
 
-## 1. Scintillation Light Yield of BC-408
+### 1. Scintillation Light Yield of BC-408
 
-### 1.1 BC-408 Stopping Power from Bethe-Bloch Formula
+#### 1.1 BC-408 Stopping Power from Bethe-Bloch Formula
 
 The Bethe-Bloch equation tells us the average stopping power, $\frac{dE}{dx}$, of the material when some charged particle incident to the material travels through it. That is, it tells us the average total energy loss per unit distance, due to electromagnetic interactions.
 
@@ -103,7 +104,7 @@ $$
 -\frac{dE}{dx} = 6\cdot 0.025589\cdot\left[ \frac{1}{2}(30.237)-1\right] = 2.17 \text{ MeV cm}^{-2}.
 $$
 
-### 1.2 Scintillation Yield from Birks' Law
+#### 1.2 Scintillation Yield from Birks' Law
 
 The Bethe-Bloch equation tells us nothing about what happens to that energy after it is deposited into the material. This is what Birks' Law tells us.
 
