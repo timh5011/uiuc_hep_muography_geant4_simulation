@@ -100,4 +100,34 @@ $$
 We then approximate this without the density effect correction, $\delta$, which is a good approximation at the energy levels we are concerned with, and get:
 
 $$
--\frac{dE}{dx} = 6\cdot 0.025589\cdot\left[ \frac{1}{2}(30.2
+-\frac{dE}{dx} = 6\cdot 0.025589\cdot\left[ \frac{1}{2}(30.237)-1\right] = 2.17 \text{ MeV cm}^{-2}.
+$$
+
+### 1.2 Scintillation Yield from Birks' Law
+
+The Bethe-Bloch equation tells us nothing about what happens to that energy after it is deposited into the material. This is what Birks' Law tells us.
+
+Birks' law is an empirical equation for calculating the number of scintillation photons produced per unit length as a function of the energy loss per unit length. It is usually expressed as:
+
+$$
+\frac{dL}{dx} = S\frac{\frac{dE}{dx}}{1+kB\frac{dE}{dx}}
+$$
+
+* The constant $k$ is the probability of quenching.
+* The constant $B$ is another constant of proportionality specific to the material.
+* Together, $kB$ is referred to as Birks' coefficient, and has units of distance per energy.
+
+Reference (3) gives that $kB=0.155$ mm/MeV, consistent with the fact that Polyvinyl toluenes have $0.126\leq kB\leq 0.207$ g MeV / cm$^2$.
+
+$S$ is the scintillation efficiency, which is generally defined to be the number of scintillation photons produced per unit distance traversed by the incident particle. (In certain contexts, it is also sometimes defined as the percentage of deposited energy which is transformed into scintillation light, but not in the context of Birks' Law — we can see this by dimensional analysis of Birks' Law).
+
+Using the result obtained from the Bethe-Bloch equation, we have an estimate for the total light yield through Birks' Law as follows:
+
+$$
+\begin{aligned}
+\frac{dL}{dx} & = S\frac{\frac{dE}{dx}}{1+kB\frac{dE}{dx}} \\
+& = S\frac{2}{1.031}  \\
+& = 10,000\cdot1.94 \\
+& = 19,398 \text{ photons cm}^{-1}.
+\end{aligned}
+$$
