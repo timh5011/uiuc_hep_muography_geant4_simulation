@@ -101,7 +101,7 @@ $$
 We then approximate this without the density effect correction, $\delta$, which is a good approximation at the energy levels we are concerned with, and get:
 
 $$
--\frac{dE}{dx} = 6\cdot 0.025589\cdot\left[ \frac{1}{2}(30.237)-1\right] = 2.17 \text{ MeV cm}^{-2}.
+-\frac{dE}{dx} = 6\cdot 0.025589\cdot\left[ \frac{1}{2}(30.237)-1\right] = 2.17 \text{ MeV cm}.
 $$
 
 #### 1.2 Scintillation Yield from Birks' Law
