@@ -3,8 +3,12 @@ import matplotlib.pyplot as plt
 import argparse
 import csv
 import numpy as np
+import os
 
-# python plot_total_energy_per_event.py build/10000EVENTS_FIBERS_HITS_output_nt_Hits\ copy.csv data/output_events_hist.csv
+# python plot_total_energy_per_event.py ../build/10000EVENTS_FIBERS_HITS_output_nt_Hits\ copy.csv ../data/output_events_hist.csv
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PLOTS_DIR = os.path.join(SCRIPT_DIR, '..', 'plots')
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description="Plot total light yield per event for each detector.")
@@ -75,7 +79,7 @@ plt.tight_layout()
 plt.show()
 
 # Save the plot
-plt.savefig('total_light_yield_histograms_with_time.png')
+plt.savefig(os.path.join(PLOTS_DIR, 'total_light_yield_histograms_with_time.png'))
 
 # Save histogram data to CSV
 with open(args.output_csv, mode='w', newline='') as file:

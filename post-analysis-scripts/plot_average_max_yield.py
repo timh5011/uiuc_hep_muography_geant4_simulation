@@ -3,7 +3,11 @@ import matplotlib.pyplot as plt
 import argparse
 import csv
 import numpy as np
+import os
 from collections import defaultdict
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PLOTS_DIR = os.path.join(SCRIPT_DIR, '..', 'plots')
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description="Plot photon yields per SiPM ranked by number of photon hits per event.")
@@ -90,7 +94,7 @@ for i, ax in enumerate(axs.flat):
 # Adjust layout and save the figure
 plt.tight_layout()
 plt.subplots_adjust(hspace=0.3, wspace=0.2)  # Adjust spacing between plots
-plt.savefig("photon_yield_ranked_histograms.png")
+plt.savefig(os.path.join(PLOTS_DIR, "photon_yield_ranked_histograms.png"))
 
 # Save histogram data to CSV
 with open(args.output_csv, mode='w', newline='') as file:
